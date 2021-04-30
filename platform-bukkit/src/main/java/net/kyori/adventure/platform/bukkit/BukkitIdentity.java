@@ -61,10 +61,8 @@ final class BukkitIdentity implements AudienceIdentity {
       } catch(final NoSuchMethodError e) {
         // Old Bukkit versions do not expose Locale
       }
-      if(this.locale == null) {
-        this.locale = Locale.US;
-      }
     }
+    if(this.locale == null) this.locale = Locale.US;
   }
 
   @Override
