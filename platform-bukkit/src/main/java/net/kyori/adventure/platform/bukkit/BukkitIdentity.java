@@ -38,12 +38,25 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 
 import static java.util.Objects.requireNonNull;
 
-final class BukkitIdentity implements AudienceIdentity {
+/**
+ * An Identity for {@link org.bukkit.Bukkit}.
+ *
+ * @since 4.0.0
+ */
+public final class BukkitIdentity implements AudienceIdentity {
   private final CommandSender sender;
   private final Player player;
   private Locale locale;
 
-  BukkitIdentity(@NonNull CommandSender sender) {
+  /**
+   * Creates an audience provider for a plugin.
+   *
+   * <p>There will only be one provider for each plugin.</p>
+   *
+   * @param sender a plugin
+   * @since 4.0.0
+   */
+  public BukkitIdentity(@NonNull CommandSender sender) {
     if(sender instanceof ProxiedCommandSender) {
       sender = ((ProxiedCommandSender) sender).getCallee();
     }
