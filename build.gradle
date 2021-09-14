@@ -41,7 +41,7 @@ subprojects {
   apply plugin: 'net.kyori.indra.license-header'
 
   group 'net.kyori'
-  version '4.0.1-SNAPSHOT'
+  version '4.0.1-OCC-SNAPSHOT'
   description 'Platform integrations for the adventure UI library'
 
   repositories {
